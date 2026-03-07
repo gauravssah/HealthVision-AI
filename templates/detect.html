@@ -1813,9 +1813,17 @@
             }
 
             .hero-features {
-                flex-direction: column;
-                align-items: center;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
                 gap: 12px;
+                justify-items: start;
+                max-width: 320px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-feature {
+                white-space: nowrap;
             }
         }
 

@@ -71,7 +71,7 @@
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
             box-shadow: 0 2px 20px rgba(0, 0, 0, .3);
-            overflow: hidden
+            overflow: visible
         }
 
         .nav-container {
@@ -603,11 +603,24 @@
             }
 
             .hero {
-                padding: 100px 20px 50px
+                padding: 100px 16px 50px
             }
 
             .hero h1 {
                 font-size: 1.8rem
+            }
+
+            .section {
+                padding: 50px 14px
+            }
+
+            .container {
+                padding: 0 14px
+            }
+
+            .card {
+                padding: 20px 14px;
+                overflow: hidden
             }
 
             .cards-grid {
@@ -623,8 +636,30 @@
                 display: none
             }
 
+            .step-item {
+                min-width: unset;
+                max-width: 100%
+            }
+
             .team-grid {
                 grid-template-columns: repeat(2, 1fr)
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                font-size: .8rem
+            }
+
+            table th,
+            table td {
+                padding: 8px 10px !important;
+                white-space: nowrap
+            }
+
+            .footer {
+                padding: 30px 14px 20px
             }
         }
 
@@ -633,12 +668,33 @@
                 font-size: 1.5rem
             }
 
+            .hero {
+                padding: 90px 14px 40px
+            }
+
+            .section {
+                padding: 40px 10px
+            }
+
+            .container {
+                padding: 0 10px
+            }
+
+            .card {
+                padding: 16px 12px
+            }
+
             .stats-row {
                 gap: 20px
             }
 
             .team-grid {
                 grid-template-columns: 1fr
+            }
+
+            .step-item {
+                min-width: unset;
+                max-width: 100%
             }
         }
     </style>
@@ -780,7 +836,7 @@
             <div class="cards-grid" style="grid-template-columns:1fr">
                 <div class="card">
                     <div style="display:flex;flex-wrap:wrap;gap:24px">
-                        <div style="flex:1;min-width:280px">
+                        <div style="flex:1;min-width:0">
                             <h3 style="margin-bottom:12px">🎯 Core Objectives</h3>
                             <ol
                                 style="list-style:decimal;padding-left:20px;color:#64748b;font-size:.9rem;line-height:2">
@@ -798,7 +854,7 @@
                                     screening purposes.</li>
                             </ol>
                         </div>
-                        <div style="flex:1;min-width:280px">
+                        <div style="flex:1;min-width:0">
                             <h3 style="margin-bottom:12px">✅ Key Deliverables</h3>
                             <ol
                                 style="list-style:decimal;padding-left:20px;color:#64748b;font-size:.9rem;line-height:2">

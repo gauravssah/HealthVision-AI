@@ -71,7 +71,7 @@
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
             box-shadow: 0 2px 20px rgba(0, 0, 0, .3);
-            overflow: hidden
+            overflow: visible
         }
 
         .nav-container {
@@ -136,7 +136,8 @@
             max-width: 1300px;
             margin: 0 auto;
             padding-top: 70px;
-            min-height: 100vh
+            min-height: 100vh;
+            overflow-x: hidden
         }
 
         /* ── Sidebar TOC ── */
@@ -197,7 +198,10 @@
         .main-content {
             flex: 1;
             padding: 40px 48px 80px;
-            max-width: 900px
+            max-width: 900px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            min-width: 0
         }
 
         .doc-hero {
@@ -598,7 +602,8 @@
             }
 
             .main-content {
-                padding: 24px 20px 60px
+                padding: 24px 16px 60px;
+                max-width: 100%
             }
         }
 
@@ -631,6 +636,10 @@
                 padding: 0 16px
             }
 
+            .doc-hero {
+                padding: 24px 16px;
+            }
+
             .doc-hero h1 {
                 font-size: 1.5rem
             }
@@ -640,15 +649,91 @@
             }
 
             .doc-table {
-                font-size: .78rem
+                font-size: .75rem;
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch
             }
 
             .flow-diagram {
-                flex-direction: column
+                flex-direction: column;
+                padding: 14px
             }
 
             .flow-arrow {
                 transform: rotate(90deg)
+            }
+
+            .info-box {
+                padding: 14px 12px
+            }
+
+            .disease-group summary {
+                padding: 10px 12px
+            }
+
+            .disease-group .content {
+                padding: 12px 10px
+            }
+
+            .code-block {
+                padding: 14px 10px;
+                font-size: .78rem
+            }
+        }
+
+        @media(max-width:480px) {
+            .main-content {
+                padding: 12px 8px 60px
+            }
+
+            .doc-hero {
+                padding: 16px 10px
+            }
+
+            .doc-hero h1 {
+                font-size: 1.2rem;
+                word-break: break-word
+            }
+
+            .doc-hero p {
+                font-size: .82rem
+            }
+
+            .doc-section p,
+            .doc-section li {
+                font-size: .88rem
+            }
+
+            .info-box {
+                padding: 12px 8px;
+                font-size: .84rem
+            }
+
+            .doc-table th,
+            .doc-table td {
+                padding: 6px 8px;
+                font-size: .72rem
+            }
+
+            .flow-box {
+                min-width: unset;
+                width: 100%
+            }
+
+            .disease-group summary {
+                padding: 8px 10px;
+                font-size: .85rem
+            }
+
+            .disease-group .content {
+                padding: 10px 8px;
+                font-size: .84rem
+            }
+
+            .code-block {
+                padding: 10px 8px;
+                font-size: .75rem
             }
         }
     </style>
