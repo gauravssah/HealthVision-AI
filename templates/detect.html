@@ -454,6 +454,11 @@
             display: none;
         }
 
+        .cam-flip {
+            background: #1e293b;
+            color: var(--white);
+        }
+
         .cam-btn:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow);
@@ -1921,6 +1926,7 @@
                     </div>
                     <div class="camera-btns" id="cameraBtns" style="display:none">
                         <button class="cam-btn cam-capture" id="captureBtn" onclick="capturePhoto()">📸 Capture</button>
+                        <button class="cam-btn cam-flip" id="flipBtn" onclick="flipCamera()">🔄 Flip</button>
                         <button class="cam-btn cam-retake" id="retakeBtn" onclick="retakePhoto()">🔄 Retake</button>
                     </div>
 
@@ -2091,6 +2097,7 @@
         let capturedBlob = null;
         let animFrameId = null;
         let cameraReady = false;
+        let currentFacing = 'user';
 
         const ENDPOINTS = { eye: '/predict/eye', face: '/predict/face', nail: '/predict/nail' };
         const STATUS_MSGS = [
@@ -2115,6 +2122,7 @@
         const cameraVideo = $('cameraVideo');
         const cameraOverlay = $('cameraOverlay');
         const captureBtn = $('captureBtn');
+        const flipBtn = $('flipBtn');
         const retakeBtn = $('retakeBtn');
         const previewContainer = $('previewContainer');
         const previewImage = $('previewImage');
@@ -2226,9 +2234,10 @@
             try {
                 const isMobile = window.innerWidth <= 768;
                 const constraints = isMobile
-                    ? { video: { facingMode: 'user', width: { ideal: 720 }, height: { ideal: 1280 } } }
-                    : { video: { facingMode: 'user', width: { ideal: 1920 }, height: { ideal: 1080 } } };
+                    ? { video: { facingMode: currentFacing, width: { ideal: 720 }, height: { ideal: 1280 } } }
+                    : { video: { facingMode: currentFacing, width: { ideal: 1920 }, height: { ideal: 1080 } } };
                 cameraStream = await navigator.mediaDevices.getUserMedia(constraints);
+                cameraVideo.style.transform = currentFacing === 'user' ? 'scaleX(-1)' : 'scaleX(1)';
                 cameraVideo.srcObject = cameraStream;
                 await new Promise((resolve) => {
                     cameraVideo.onloadedmetadata = () => {
@@ -2357,6 +2366,7 @@
 
                 previewImage.src = URL.createObjectURL(blob);
                 captureBtn.style.display = 'none';
+                flipBtn.style.display = 'none';
                 retakeBtn.style.display = '';
                 resultCard.style.display = 'none';
                 errorBox.style.display = 'none';
@@ -2374,9 +2384,16 @@
             errorBox.style.display = 'none';
             captureBtn.style.display = '';
             retakeBtn.style.display = 'none';
+            flipBtn.style.display = '';
 
             cameraContainer.style.display = 'block';
             startCamera();
+        }
+
+        async function flipCamera() {
+            currentFacing = currentFacing === 'user' ? 'environment' : 'user';
+            stopCamera();
+            await startCamera();
         }
 
         /* ─── Prediction ────────────────────────────────────────── */

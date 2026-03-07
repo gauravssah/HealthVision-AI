@@ -40,14 +40,17 @@
         }
 
         html {
-            scroll-behavior: smooth
+            scroll-behavior: smooth;
+            overflow-x: hidden
         }
 
         body {
             font-family: var(--font);
             color: var(--text-dark);
             line-height: 1.7;
-            background: var(--white)
+            background: var(--white);
+            overflow-x: hidden;
+            max-width: 100vw
         }
 
         a {
@@ -61,12 +64,14 @@
             top: 0;
             left: 0;
             width: 100%;
+            max-width: 100vw;
             z-index: 1000;
             padding: 14px 0;
             background: rgba(4, 47, 46, .92);
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, .3)
+            box-shadow: 0 2px 20px rgba(0, 0, 0, .3);
+            overflow: hidden
         }
 
         .nav-container {
@@ -575,11 +580,14 @@
                 top: 100%;
                 left: 0;
                 width: 100%;
+                max-width: 100vw;
                 background: rgba(4, 47, 46, .95);
                 flex-direction: column;
                 padding: 20px 24px;
                 gap: 16px;
-                backdrop-filter: blur(18px)
+                backdrop-filter: blur(18px);
+                overflow-y: auto;
+                max-height: 70vh
             }
 
             .nav-links.open {
@@ -588,6 +596,10 @@
 
             .nav-toggle {
                 display: flex
+            }
+
+            .nav-container {
+                padding: 0 16px
             }
 
             .hero {
