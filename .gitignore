@@ -22,8 +22,8 @@ env/
 .DS_Store
 Thumbs.db
 
-# ─── Model files (too large for GitHub, deploy separately) ─
-*.h5
+# ─── Model files (keep .h5 for deployment, ignore others) ─
+# *.h5  ← KEPT for deployment (face_model.h5, jaundice_model.h5, nail_model.h5)
 *.hdf5
 *.pkl
 *.pt

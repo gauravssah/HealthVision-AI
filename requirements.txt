@@ -3,4 +3,5 @@ flask
 flask-cors
 Pillow
 numpy
-opencv-python
+opencv-python-headless
+gunicorn
