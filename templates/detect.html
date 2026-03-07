@@ -412,8 +412,10 @@
 
         .camera-container video {
             width: 100%;
+            height: auto;
             display: block;
             border-radius: var(--radius);
+            object-fit: cover;
         }
 
         .camera-container canvas.overlay {
@@ -1649,13 +1651,38 @@
                 font-size: 1.8rem;
             }
 
+            .detect-section {
+                padding: 0 10px;
+            }
+
             .detect-card {
-                padding: 22px 16px;
+                padding: 16px 10px;
                 max-width: 100%;
             }
 
             .detect-layout {
                 grid-template-columns: 1fr;
+            }
+
+            .camera-container {
+                border-radius: 8px;
+                margin: 0 -2px;
+            }
+
+            .camera-container video {
+                width: 100%;
+                height: auto;
+                min-height: 50vh;
+                object-fit: cover;
+            }
+
+            .preview-container {
+                margin-top: 10px;
+            }
+
+            .preview-container img {
+                width: 100%;
+                height: auto;
             }
 
             .result-card {
@@ -1709,6 +1736,10 @@
                 font-size: 1.5rem;
             }
 
+            .detect-section {
+                padding: 0 6px;
+            }
+
             .module-tabs {
                 flex-direction: column;
             }
@@ -1718,12 +1749,39 @@
             }
 
             .detect-card {
-                padding: 18px 14px;
+                padding: 12px 8px;
                 border-radius: var(--radius);
             }
 
+            .camera-container {
+                border-radius: 6px;
+                margin: 0 -4px;
+            }
+
+            .camera-container video {
+                min-height: 55vh;
+            }
+
+            .camera-btns {
+                margin-top: 10px;
+            }
+
+            .cam-btn {
+                padding: 10px 20px;
+                font-size: .82rem;
+            }
+
             .upload-zone {
-                padding: 28px 16px;
+                padding: 24px 12px;
+            }
+
+            .mode-toggle {
+                gap: 6px;
+            }
+
+            .mode-btn {
+                padding: 8px 14px;
+                font-size: .82rem;
             }
 
             .dual-bar-container {
@@ -2166,9 +2224,11 @@
         async function startCamera() {
             cameraReady = false;
             try {
-                cameraStream = await navigator.mediaDevices.getUserMedia({
-                    video: { facingMode: 'user', width: { ideal: 1920 }, height: { ideal: 1080 } }
-                });
+                const isMobile = window.innerWidth <= 768;
+                const constraints = isMobile
+                    ? { video: { facingMode: 'user', width: { ideal: 720 }, height: { ideal: 1280 } } }
+                    : { video: { facingMode: 'user', width: { ideal: 1920 }, height: { ideal: 1080 } } };
+                cameraStream = await navigator.mediaDevices.getUserMedia(constraints);
                 cameraVideo.srcObject = cameraStream;
                 await new Promise((resolve) => {
                     cameraVideo.onloadedmetadata = () => {
