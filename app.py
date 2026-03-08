@@ -1,5 +1,6 @@
 import os
 import io
+import gc
 import time
 import base64
 import random
@@ -9,8 +10,20 @@ from PIL import Image
 from flask import Flask, render_template, request, jsonify, send_from_directory
 from flask_cors import CORS
 
-# ─── TensorFlow + Compatibility Patch ───────────────────────────────────────
+# ─── TensorFlow Memory Optimization ────────────────────────────────────────
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'          # suppress TF info/warnings
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'          # disable oneDNN for stability
+
 import tensorflow as tf
+
+# Limit TF memory growth — critical for Render 512MB free tier
+try:
+    gpus = tf.config.list_physical_devices('GPU')
+    for gpu in gpus:
+        tf.config.experimental.set_memory_growth(gpu, True)
+except Exception:
+    pass
+
 from tensorflow.keras.layers import DepthwiseConv2D as _OrigDWConv2D
 
 
@@ -277,8 +290,15 @@ def load_models():
         print(f"  Failed to load nail model: {e} — demo mode active")
         nail_model = None
 
+    # Free unused memory after loading
+    gc.collect()
 
-load_models()
+
+# Only load models if not explicitly disabled (useful for memory-constrained envs)
+if os.environ.get('SKIP_MODELS', '').lower() != 'true':
+    load_models()
+else:
+    print("  SKIP_MODELS=true — running in demo mode")
 
 
 # ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -355,13 +375,25 @@ def img_to_b64(image):
     return base64.b64encode(buf).decode("utf-8")
 
 
-def _ensure_delay(start, minimum=2.0):
+def _ensure_delay(start, minimum=0.5):
     elapsed = time.time() - start
     if elapsed < minimum:
         time.sleep(minimum - elapsed)
 
 
 # ─── Routes ──────────────────────────────────────────────────────────────────
+@app.route("/health")
+def health():
+    return jsonify({
+        "status": "ok",
+        "models": {
+            "jaundice": jaundice_model is not None,
+            "face": face_model is not None,
+            "nail": nail_model is not None,
+        }
+    })
+
+
 @app.route("/")
 def index():
     return render_template("index.html")
