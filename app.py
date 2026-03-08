@@ -360,6 +360,11 @@ def detect():
     return render_template("detect.html")
 
 
+@app.route("/report")
+def project_report():
+    return render_template("project_report.html")
+
+
 @app.route("/documentation")
 def documentation():
     return render_template("documentation.html")
