@@ -241,29 +241,41 @@ nail_model = None
 def load_models():
     global jaundice_model, face_model, nail_model
 
-    if os.path.exists("jaundice_model.h5"):
-        jaundice_model = tf.keras.models.load_model(
-            "jaundice_model.h5", custom_objects=CUSTOM_OBJECTS
-        )
-        print("  Jaundice model loaded")
-    else:
-        print("  jaundice_model.h5 not found — demo mode active")
+    try:
+        if os.path.exists("jaundice_model.h5"):
+            jaundice_model = tf.keras.models.load_model(
+                "jaundice_model.h5", custom_objects=CUSTOM_OBJECTS
+            )
+            print("  Jaundice model loaded")
+        else:
+            print("  jaundice_model.h5 not found — demo mode active")
+    except Exception as e:
+        print(f"  Failed to load jaundice model: {e} — demo mode active")
+        jaundice_model = None
 
-    if os.path.exists("face_model.h5"):
-        face_model = tf.keras.models.load_model(
-            "face_model.h5", custom_objects=CUSTOM_OBJECTS
-        )
-        print("  Face model loaded")
-    else:
-        print("  face_model.h5 not found — demo mode active")
+    try:
+        if os.path.exists("face_model.h5"):
+            face_model = tf.keras.models.load_model(
+                "face_model.h5", custom_objects=CUSTOM_OBJECTS
+            )
+            print("  Face model loaded")
+        else:
+            print("  face_model.h5 not found — demo mode active")
+    except Exception as e:
+        print(f"  Failed to load face model: {e} — demo mode active")
+        face_model = None
 
-    if os.path.exists("nail_model.h5"):
-        nail_model = tf.keras.models.load_model(
-            "nail_model.h5", custom_objects=CUSTOM_OBJECTS
-        )
-        print("  Nail model loaded")
-    else:
-        print("  nail_model.h5 not found — demo mode active")
+    try:
+        if os.path.exists("nail_model.h5"):
+            nail_model = tf.keras.models.load_model(
+                "nail_model.h5", custom_objects=CUSTOM_OBJECTS
+            )
+            print("  Nail model loaded")
+        else:
+            print("  nail_model.h5 not found — demo mode active")
+    except Exception as e:
+        print(f"  Failed to load nail model: {e} — demo mode active")
+        nail_model = None
 
 
 load_models()
@@ -383,6 +395,7 @@ def team_image(filename):
 # ── Eye / Jaundice ───────────────────────────────────────────────────────────
 @app.route("/predict/eye", methods=["POST"])
 def predict_eye():
+  try:
     if "file" not in request.files:
         return jsonify({"success": False, "error": "No file uploaded"}), 400
 
@@ -493,11 +506,15 @@ def predict_eye():
         "demo_mode": jaundice_model is None,
         "disease_info": DISEASE_INFO.get(prediction, {}),
     })
+  except Exception as e:
+    print(f"[ERROR] predict_eye: {e}")
+    return jsonify({"success": False, "error": f"Eye analysis failed: {str(e)}"}), 500
 
 
 # ── Face / Skin Disease ─────────────────────────────────────────────────────
 @app.route("/predict/face", methods=["POST"])
 def predict_face():
+  try:
     if "file" not in request.files:
         return jsonify({"success": False, "error": "No file uploaded"}), 400
 
@@ -570,11 +587,15 @@ def predict_face():
         "demo_mode": face_model is None,
         "disease_info": DISEASE_INFO.get(pred_label, {}),
     })
+  except Exception as e:
+    print(f"[ERROR] predict_face: {e}")
+    return jsonify({"success": False, "error": f"Face analysis failed: {str(e)}"}), 500
 
 
 # ── Nail Disease ─────────────────────────────────────────────────────────────
 @app.route("/predict/nail", methods=["POST"])
 def predict_nail():
+  try:
     if "file" not in request.files:
         return jsonify({"success": False, "error": "No file uploaded"}), 400
 
@@ -643,6 +664,9 @@ def predict_nail():
         "demo_mode": nail_model is None,
         "disease_info": DISEASE_INFO.get(pred_label, {}),
     })
+  except Exception as e:
+    print(f"[ERROR] predict_nail: {e}")
+    return jsonify({"success": False, "error": f"Nail analysis failed: {str(e)}"}), 500
 
 
 # ─── Run ─────────────────────────────────────────────────────────────────────
