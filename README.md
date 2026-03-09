@@ -4,12 +4,12 @@
 
 ### AI-Powered Multi-Disease Health Detection System
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-HealthVision_AI-0891b2?style=for-the-badge)](https://healthvision-ai-1enh.onrender.com/)
-[![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.16.2-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
-[![Flask](https://img.shields.io/badge/Flask-Backend-000000?style=flat-square&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
-[![OpenCV](https://img.shields.io/badge/OpenCV-Computer_Vision-5C3EE8?style=flat-square&logo=opencv&logoColor=white)](https://opencv.org/)
-[![Render](https://img.shields.io/badge/Deployed_on-Render-46E3B7?style=flat-square&logo=render&logoColor=white)](https://render.com/)
+<a href="https://healthvision-ai-1enh.onrender.com/" target="_blank"><img src="https://img.shields.io/badge/🌐_Live_Demo-HealthVision_AI-0891b2?style=for-the-badge" alt="Live Demo"></a>
+<a href="https://www.python.org/" target="_blank"><img src="https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"></a>
+<a href="https://www.tensorflow.org/" target="_blank"><img src="https://img.shields.io/badge/TensorFlow-2.16.2-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" alt="TensorFlow"></a>
+<a href="https://flask.palletsprojects.com/" target="_blank"><img src="https://img.shields.io/badge/Flask-Backend-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask"></a>
+<a href="https://opencv.org/" target="_blank"><img src="https://img.shields.io/badge/OpenCV-Computer_Vision-5C3EE8?style=flat-square&logo=opencv&logoColor=white" alt="OpenCV"></a>
+<a href="https://render.com/" target="_blank"><img src="https://img.shields.io/badge/Deployed_on-Render-46E3B7?style=flat-square&logo=render&logoColor=white" alt="Render"></a>
 
 <br>
 
@@ -20,7 +20,7 @@
 
 <br>
 
-[🌐 Live Demo](https://healthvision-ai-1enh.onrender.com/) · [📄 Project Report](PROJECT_REPORT.md) · [📖 Documentation](https://healthvision-ai-1enh.onrender.com/documentation)
+<a href="https://healthvision-ai-1enh.onrender.com/" target="_blank">🌐 Live Demo</a> · <a href="PROJECT_REPORT.md">📄 Project Report</a> · <a href="https://healthvision-ai-1enh.onrender.com/documentation" target="_blank">📖 Documentation</a>
 
 </div>
 
@@ -28,7 +28,7 @@
 
 ## 🌐 Live Demo
 
-**🔗 [https://healthvision-ai-1enh.onrender.com/](https://healthvision-ai-1enh.onrender.com/)**
+**🔗 <a href="https://healthvision-ai-1enh.onrender.com/" target="_blank">https://healthvision-ai-1enh.onrender.com/</a>**
 
 > **⚠️ Important — Render Free Tier Cold Start:**
 > This project is deployed on **Render's free tier**. Free-tier services **spin down after 15 minutes of inactivity** (sleep mode). When you visit the link after a period of inactivity:
@@ -422,67 +422,115 @@ The training notebooks are available in the repository:
 
 ## 👥 Team
 
+<div align="center">
+
 > **Department of Computer Science & Engineering (Artificial Intelligence)**
 > **Govt. Engineering College, Munger**
 
-### Project Supervisor
+</div>
 
+### 🎓 Project Supervisor
+
+<div align="center">
+<table>
+  <tr>
+    <td align="center" width="280">
+      <a href="https://www.linkedin.com/in/dr-saurabh-suman-409a4697/" target="_blank">
+        <img src="Team/05.png" width="140" height="140" style="border-radius:50%; object-fit:cover;" alt="Dr. Saurabh Suman">
+      </a>
+      <br>
+      <strong>Dr. Saurabh Suman</strong>
+      <br>
+      <sub>🏫 Assistant Professor</sub>
+      <br>
+      <sub>Dept. of CSE, Govt. Engineering College, Munger</sub>
+      <br><br>
+      <a href="https://www.linkedin.com/in/dr-saurabh-suman-409a4697/" target="_blank">
+        <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+      </a>
+    </td>
+  </tr>
+</table>
+</div>
+
+### 👨‍💻 Student Developers
+
+<div align="center">
 <table>
   <tr>
     <td align="center" width="250">
-      <img src="Team/05.png" width="130" height="130" style="border-radius: 50%;" alt="Dr. Saurabh Suman"><br>
-      <strong>Dr. Saurabh Suman</strong><br>
-      <sub>Assistant Professor</sub><br>
-      <sub>Dept. of CSE, Govt. Engineering College, Munger</sub><br><br>
-      <a href="https://www.linkedin.com/in/dr-saurabh-suman-409a4697/">
+      <a href="https://www.linkedin.com/in/gauravssah" target="_blank">
+        <img src="Team/01.png" width="130" height="130" style="border-radius:50%; object-fit:cover;" alt="Gaurav Kumar">
+      </a>
+      <br>
+      <strong>Gaurav Kumar</strong>
+      <br>
+      <sub>📋 Reg No: 23151144901</sub>
+      <br>
+      <sub>🤖 CSE (Artificial Intelligence)</sub>
+      <br>
+      <sub>📅 Session: 2023–2026</sub>
+      <br><br>
+      <a href="https://www.linkedin.com/in/gauravssah" target="_blank">
+        <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+      </a>
+    </td>
+    <td align="center" width="250">
+      <a href="https://www.linkedin.com/in/nitesh-kumar-pandey-211136260/" target="_blank">
+        <img src="Team/02.png" width="130" height="130" style="border-radius:50%; object-fit:cover;" alt="Nitesh Kumar">
+      </a>
+      <br>
+      <strong>Nitesh Kumar</strong>
+      <br>
+      <sub>📋 Reg No: 22151144040</sub>
+      <br>
+      <sub>🤖 CSE (Artificial Intelligence)</sub>
+      <br>
+      <sub>📅 Session: 2022–2026</sub>
+      <br><br>
+      <a href="https://www.linkedin.com/in/nitesh-kumar-pandey-211136260/" target="_blank">
         <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
       </a>
     </td>
   </tr>
-</table>
-
-### Student Developers
-
-<table>
   <tr>
-    <td align="center" width="220">
-      <img src="Team/01.png" width="120" height="120" style="border-radius: 50%;" alt="Gaurav Kumar"><br>
-      <strong>Gaurav Kumar</strong><br>
-      <sub>Reg No: 23151144901</sub><br>
-      <sub>CSE (Artificial Intelligence)</sub><br><br>
-      <a href="https://www.linkedin.com/in/gauravssah">
+    <td align="center" width="250">
+      <a href="https://www.linkedin.com/in/rupeskumar" target="_blank">
+        <img src="Team/03.png" width="130" height="130" style="border-radius:50%; object-fit:cover;" alt="Rupesh Kumar">
+      </a>
+      <br>
+      <strong>Rupesh Kumar</strong>
+      <br>
+      <sub>📋 Reg No: 22151144010</sub>
+      <br>
+      <sub>🤖 CSE (Artificial Intelligence)</sub>
+      <br>
+      <sub>📅 Session: 2022–2026</sub>
+      <br><br>
+      <a href="https://www.linkedin.com/in/rupeskumar" target="_blank">
         <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
       </a>
     </td>
-    <td align="center" width="220">
-      <img src="Team/02.png" width="120" height="120" style="border-radius: 50%;" alt="Nitesh Kumar"><br>
-      <strong>Nitesh Kumar</strong><br>
-      <sub>Reg No: 22151144040</sub><br>
-      <sub>CSE (Artificial Intelligence)</sub><br><br>
-      <a href="https://www.linkedin.com/in/nitesh-kumar-pandey-211136260/">
-        <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+    <td align="center" width="250">
+      <a href="https://www.linkedin.com/in/indrajeetkumar01/" target="_blank">
+        <img src="Team/04.png" width="130" height="130" style="border-radius:50%; object-fit:cover;" alt="Indrajeet Kumar">
       </a>
-    </td>
-    <td align="center" width="220">
-      <img src="Team/03.png" width="120" height="120" style="border-radius: 50%;" alt="Rupesh Kumar"><br>
-      <strong>Rupesh Kumar</strong><br>
-      <sub>Reg No: 22151144010</sub><br>
-      <sub>CSE (Artificial Intelligence)</sub><br><br>
-      <a href="https://www.linkedin.com/in/rupeskumar">
-        <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-      </a>
-    </td>
-    <td align="center" width="220">
-      <img src="Team/04.png" width="120" height="120" style="border-radius: 50%;" alt="Indrajeet Kumar"><br>
-      <strong>Indrajeet Kumar</strong><br>
-      <sub>Reg No: 23151144906</sub><br>
-      <sub>CSE (Artificial Intelligence)</sub><br><br>
-      <a href="https://www.linkedin.com/in/indrajeetkumar01/">
+      <br>
+      <strong>Indrajeet Kumar</strong>
+      <br>
+      <sub>📋 Reg No: 23151144906</sub>
+      <br>
+      <sub>🤖 CSE (Artificial Intelligence)</sub>
+      <br>
+      <sub>📅 Session: 2023–2026</sub>
+      <br><br>
+      <a href="https://www.linkedin.com/in/indrajeetkumar01/" target="_blank">
         <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
       </a>
     </td>
   </tr>
 </table>
+</div>
 
 ---
 
@@ -494,7 +542,7 @@ The training notebooks are available in the repository:
 
 ## 📄 License
 
-This project is developed as a final-year academic project at **Govt. Engineering College, Munger** under the **Department of Computer Science & Engineering (Artificial Intelligence)**.
+This project is developed as a final-year **Minor Project** at **Govt. Engineering College, Munger** under the **Department of Computer Science & Engineering (Artificial Intelligence)**.
 
 ---
 
@@ -502,6 +550,6 @@ This project is developed as a final-year academic project at **Govt. Engineerin
 
 **🏥 HealthVision AI — Empowering Health Through Artificial Intelligence**
 
-[![Live Demo](https://img.shields.io/badge/🌐_Try_it_Live-HealthVision_AI-0891b2?style=for-the-badge)](https://healthvision-ai-1enh.onrender.com/)
+<a href="https://healthvision-ai-1enh.onrender.com/" target="_blank"><img src="https://img.shields.io/badge/🌐_Try_it_Live-HealthVision_AI-0891b2?style=for-the-badge" alt="Live Demo"></a>
 
 </div>
