@@ -466,8 +466,6 @@ The training notebooks are available in the repository:
       <br><br>
       <strong>Gaurav Kumar</strong>
       <br>
-      <sub>📋 Reg No: 23151144901</sub>
-      <br>
       <sub>🤖 CSE (Artificial Intelligence)</sub>
       <br>
       <sub>📅 Session: 2023–2026</sub>
@@ -482,8 +480,6 @@ The training notebooks are available in the repository:
       </a>
       <br><br>
       <strong>Nitesh Kumar</strong>
-      <br>
-      <sub>📋 Reg No: 22151144040</sub>
       <br>
       <sub>🤖 CSE (Artificial Intelligence)</sub>
       <br>
@@ -500,8 +496,6 @@ The training notebooks are available in the repository:
       <br><br>
       <strong>Rupesh Kumar</strong>
       <br>
-      <sub>📋 Reg No: 22151144010</sub>
-      <br>
       <sub>🤖 CSE (Artificial Intelligence)</sub>
       <br>
       <sub>📅 Session: 2022–2026</sub>
@@ -516,8 +510,6 @@ The training notebooks are available in the repository:
       </a>
       <br><br>
       <strong>Indrajeet Kumar</strong>
-      <br>
-      <sub>📋 Reg No: 23151144906</sub>
       <br>
       <sub>🤖 CSE (Artificial Intelligence)</sub>
       <br>
