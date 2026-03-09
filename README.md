@@ -426,6 +426,7 @@ The training notebooks are available in the repository:
 
 > **Department of Computer Science & Engineering (Artificial Intelligence)**
 > **Govt. Engineering College, Munger**
+> **Final Year Minor Project (2025–2026)**
 
 </div>
 
@@ -436,9 +437,9 @@ The training notebooks are available in the repository:
   <tr>
     <td align="center" width="280">
       <a href="https://www.linkedin.com/in/dr-saurabh-suman-409a4697/" target="_blank">
-        <img src="Team/05.png" width="140" height="140" style="border-radius:50%; object-fit:cover;" alt="Dr. Saurabh Suman">
+        <img src="Team/05.png" width="150" height="150" alt="Dr. Saurabh Suman">
       </a>
-      <br>
+      <br><br>
       <strong>Dr. Saurabh Suman</strong>
       <br>
       <sub>🏫 Assistant Professor</sub>
@@ -458,11 +459,11 @@ The training notebooks are available in the repository:
 <div align="center">
 <table>
   <tr>
-    <td align="center" width="250">
+    <td align="center" width="220">
       <a href="https://www.linkedin.com/in/gauravssah" target="_blank">
-        <img src="Team/01.png" width="130" height="130" style="border-radius:50%; object-fit:cover;" alt="Gaurav Kumar">
+        <img src="Team/01.png" width="120" height="120" alt="Gaurav Kumar">
       </a>
-      <br>
+      <br><br>
       <strong>Gaurav Kumar</strong>
       <br>
       <sub>📋 Reg No: 23151144901</sub>
@@ -475,11 +476,11 @@ The training notebooks are available in the repository:
         <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
       </a>
     </td>
-    <td align="center" width="250">
+    <td align="center" width="220">
       <a href="https://www.linkedin.com/in/nitesh-kumar-pandey-211136260/" target="_blank">
-        <img src="Team/02.png" width="130" height="130" style="border-radius:50%; object-fit:cover;" alt="Nitesh Kumar">
+        <img src="Team/02.png" width="120" height="120" alt="Nitesh Kumar">
       </a>
-      <br>
+      <br><br>
       <strong>Nitesh Kumar</strong>
       <br>
       <sub>📋 Reg No: 22151144040</sub>
@@ -492,13 +493,11 @@ The training notebooks are available in the repository:
         <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
       </a>
     </td>
-  </tr>
-  <tr>
-    <td align="center" width="250">
+    <td align="center" width="220">
       <a href="https://www.linkedin.com/in/rupeskumar" target="_blank">
-        <img src="Team/03.png" width="130" height="130" style="border-radius:50%; object-fit:cover;" alt="Rupesh Kumar">
+        <img src="Team/03.png" width="120" height="120" alt="Rupesh Kumar">
       </a>
-      <br>
+      <br><br>
       <strong>Rupesh Kumar</strong>
       <br>
       <sub>📋 Reg No: 22151144010</sub>
@@ -511,11 +510,11 @@ The training notebooks are available in the repository:
         <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
       </a>
     </td>
-    <td align="center" width="250">
+    <td align="center" width="220">
       <a href="https://www.linkedin.com/in/indrajeetkumar01/" target="_blank">
-        <img src="Team/04.png" width="130" height="130" style="border-radius:50%; object-fit:cover;" alt="Indrajeet Kumar">
+        <img src="Team/04.png" width="120" height="120" alt="Indrajeet Kumar">
       </a>
-      <br>
+      <br><br>
       <strong>Indrajeet Kumar</strong>
       <br>
       <sub>📋 Reg No: 23151144906</sub>
