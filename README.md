@@ -467,7 +467,7 @@ The training notebooks are available in the repository:
 
 > **Department of Computer Science & Engineering (Artificial Intelligence)**
 > **Govt. Engineering College, Munger**
-> **Final Year Minor Project (2025–2026)**
+> **Final Year Project (2025–2026)**
 
 </div>
 
