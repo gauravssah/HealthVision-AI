@@ -88,7 +88,7 @@ The platform offers a user-friendly web interface that supports both image uploa
 | **Chat Timeline UX**             | Hospital cards render inline in chat so new Q/A always appears at the bottom     |
 | **Render Stability Hardening**   | Input downscaling, upload-size guard, and TensorFlow-safe startup flow           |
 | **Demo Mode**                    | Fully functional UI demonstration when models are not loaded                     |
-| **Responsive Design**            | Works across desktop and mobile devices                                          |
+| **Responsive Design**            | Works across desktop and mobile devices also implementable across various devices|
 | **Production Ready**             | Configured for deployment on Render with Gunicorn WSGI server                    |
 
 ---
