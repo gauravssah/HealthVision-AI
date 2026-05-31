@@ -12,7 +12,7 @@ from urllib.request import Request, urlopen
 import numpy as np
 import cv2
 from PIL import Image
-from flask import Flask, render_template, request, jsonify, send_from_directory
+from flask import Flask, render_template, request, jsonify, send_from_directory, abort
 from flask_cors import CORS
 
 # ─── TensorFlow Memory Optimization ────────────────────────────────────────
@@ -52,6 +52,11 @@ app.config["MAX_CONTENT_LENGTH"] = 12 * 1024 * 1024  # 12MB hard limit
 ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg", "jfif", "bmp", "webp"}
 IMG_SIZE = (224, 224)
 MAX_INPUT_SIDE = 1024
+REPORT_DOWNLOAD_DIR = os.path.join(app.root_path, "Report And PPT", "8th Sem")
+REPORT_DOWNLOADS = {
+    "final-project-report": "Final Project Report.pdf",
+    "healthvision-ai-project-report": "HealthVision_AI_Project_Report.pdf",
+}
 
 # ─── Haar Cascades ───────────────────────────────────────────────────────────
 face_cascade = cv2.CascadeClassifier(
@@ -437,6 +442,14 @@ def detect():
 @app.route("/report")
 def project_report():
     return render_template("project_report.html")
+
+
+@app.route("/report/download/<report_key>")
+def download_project_report(report_key):
+    filename = REPORT_DOWNLOADS.get(report_key)
+    if not filename:
+        abort(404)
+    return send_from_directory(REPORT_DOWNLOAD_DIR, filename, as_attachment=True)
 
 
 @app.route("/documentation")

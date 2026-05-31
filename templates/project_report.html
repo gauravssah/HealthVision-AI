@@ -154,6 +154,77 @@
             margin: 0 auto
         }
 
+        .report-download {
+            position: relative;
+            display: inline-block;
+            margin-top: 24px;
+            text-align: left;
+        }
+
+        .report-download summary {
+            list-style: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 240px;
+            justify-content: center;
+            padding: 12px 20px;
+            border-radius: 9999px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            font-weight: 700;
+            box-shadow: 0 12px 28px rgba(6, 182, 212, .28);
+            transition: var(--transition);
+        }
+
+        .report-download summary::-webkit-details-marker {
+            display: none
+        }
+
+        .report-download summary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 34px rgba(6, 182, 212, .36);
+        }
+
+        .report-download summary::after {
+            content: "v";
+            font-size: .78rem;
+            transition: transform .2s ease;
+        }
+
+        .report-download[open] summary::after {
+            transform: rotate(180deg)
+        }
+
+        .download-menu {
+            position: absolute;
+            left: 50%;
+            top: calc(100% + 10px);
+            transform: translateX(-50%);
+            width: min(320px, calc(100vw - 48px));
+            padding: 8px;
+            border-radius: var(--radius);
+            background: var(--white);
+            color: var(--text-dark);
+            box-shadow: var(--shadow-lg);
+            z-index: 5;
+        }
+
+        .download-menu a {
+            display: block;
+            padding: 11px 12px;
+            border-radius: 8px;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: .92rem;
+        }
+
+        .download-menu a:hover {
+            background: #ecfeff;
+            color: var(--primary-dark);
+        }
+
         .report-hero .badge {
             display: inline-block;
             background: rgba(16, 185, 129, .15);
@@ -455,6 +526,13 @@
         <span class="badge">📄 Academic Project Report</span>
         <h1>HealthVision AI — Project Report</h1>
         <p>AI-Powered Multi-Disease Health Detection System</p>
+        <details class="report-download">
+            <summary>Download Report</summary>
+            <div class="download-menu">
+                <a href="/report/download/final-project-report" onclick="closeReportDownloadMenu()">Final Project Report.pdf</a>
+                <a href="/report/download/healthvision-ai-project-report" onclick="closeReportDownloadMenu()">HealthVision_AI_Project_Report.pdf</a>
+            </div>
+        </details>
     </div>
 
     <!-- ═══ INFO TABLE ═══ -->
@@ -1367,6 +1445,13 @@ CUSTOM_OBJECTS = {"DepthwiseConv2D": PatchedDepthwiseConv2D}</code></pre>
     </div>
 
     <script>
+        function closeReportDownloadMenu() {
+            const menu = document.querySelector('.report-download');
+            if (menu) {
+                menu.removeAttribute('open');
+            }
+        }
+
         window.addEventListener('message', event => {
             if (!event.data || event.data.type !== 'healthvision-workflow-height') return;
             const height = Math.max(360, Number(event.data.height || 0));
